@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+/*=== Common CSS ====*/
+.title h1 {
+  font-size: 32px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.records {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+/*=== Loader CSS ====*/
+.loader {
+  display: flex;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  /* background-color: #33333394; */
+}
+.loader-text p {
+  padding-top: 25px;
+  margin-left: -35px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+/*=== Buttons CSS ====*/
+.custom-btn1 {
+  color: #fff;
+  background-color: #115A85;
+  border-color: #115A85;
+  border-width: 2px;
+}
+.custom-btn1:hover {
+  color: #115A85;
+  background-color: transparent;
+  border-color: #115A85;
+}
+.custom-btn2 {
+  color: #115A85;
+  background-color: transparent;
+  border-color: #115A85;
+  border-width: 2px;
+}
+.custom-btn2:hover {
+  color: #fff;
+  background-color: #115A85 !important;
+  border-color: #115A85 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*=== Table CSS ====*/
+
+
+i.fas.fa-heart {
+  color: #8c8c8c;
+}
+i.fas.fa-heart.red-color {
+  color: red;
+}
+
+/*=== Popup CSS ====*/
+h4.popup-title {
+  margin-top: -10px;
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 21px;
+  border: 2px solid #115A85;
+}
+.contributors-data, .favorities-data {
+  overflow: auto;
+  max-height: 330px;
+}
+.records-count p {
+  margin-bottom: 0px;
+  padding-top: 10px;
 }
