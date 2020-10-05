@@ -48,15 +48,17 @@ const MasterView = (props) => {
   // Adding/removing repositories to/from favoritieslist
   const favoritiesHandler = (id) => {
     let masterDataList = [...masterData];
+    let favArr = [...favoritiesList];
     let itemIndex = masterDataList.findIndex(ele => ele.id === id);
     if (masterDataList[itemIndex].isFavorite) {
       masterDataList[itemIndex].isFavorite = false;
-      let favIndex = favoritiesList.indexOf(id);
-      favoritiesList.splice(favIndex, 1);
+      let favIndex = favArr.indexOf(id);
+      favArr.splice(favIndex, 1);
     } else {
       masterDataList[itemIndex].isFavorite = true;
-      setFavoritiesList([...favoritiesList, id]);
+      favArr.push(id);
     }
+    setFavoritiesList([...favArr]);
     setMasterData(masterDataList);
   }
 
